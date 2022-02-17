@@ -1,11 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
+
 import App from './App';
 
 
 // 导入ntd-mobile的样式
+// import 'antd/dist/antd.css';
 // import 'antd-mobile/dist/antd-mobile.css'
+import './index.css';
 
 ReactDOM.render( <
     App / > ,

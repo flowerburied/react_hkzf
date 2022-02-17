@@ -18,14 +18,8 @@ function App() {
         项目根组件 */}
 
         {/* 配置导航菜单 */}
-        <ul>
-          <li>
-            <Link to="/home">首页</Link>
-          </li>
-          <li>
-            <Link to="/citylist">城市选择</Link>
-          </li>
-        </ul>
+        <Link to="/home">首页</Link>
+        <Link to="/citylist">城市选择</Link>
 
         {/* 配置路由 */}
         <Routes>

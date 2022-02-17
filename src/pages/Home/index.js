@@ -1,7 +1,15 @@
 import React from "react";
 
+
+
 export default class Home extends React.Component {
   render() {
-    return <div> 这是home页面 </div>;
+    return (
+      <div>
+        {" "}
+        首页
+
+      </div>
+    );
   }
 }
