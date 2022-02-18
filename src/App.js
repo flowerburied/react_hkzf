@@ -1,21 +1,20 @@
 import React from "react";
 
 // 导入路由
-import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
+import {  BrowserRouter as Router,Routes, Route, Link } from "react-router-dom";
 
 // 导入首页和城市选择两个组件
 import Home from "./pages/Home";
 import CityList from "./pages/CityList";
 
 // 导入要使用的组件
-// import { Button } from "antd-mobile";
+// import { Button } from 'antd-mobile'
 
 function App() {
   return (
     <Router>
       <div className="App">
-        {/* <Button>登录</Button>
-        项目根组件 */}
+      {/* <Button color='primary'>Primary</Button> */}
 
         {/* 配置导航菜单 */}
         <Link to="/home">首页</Link>

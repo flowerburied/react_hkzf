@@ -3,10 +3,8 @@ import ReactDOM from 'react-dom';
 
 import App from './App';
 
+// 现在不用导入antd-modile了
 
-// 导入ntd-mobile的样式
-// import 'antd/dist/antd.css';
-// import 'antd-mobile/dist/antd-mobile.css'
 import './index.css';
 
 ReactDOM.render( <

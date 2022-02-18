@@ -3,8 +3,9 @@
 ## 新版react-router-dom重写
 component换成element!!!
 
+## antd-mobile是移动端的东西  antd是PC端的东西！！！
 
-
+export 'useHistory' (imported as 'useHistory') was not found in 'react-router-dom' (possible exports: BrowserRouter, HashRouter, Link, MemoryRouter, NavLink, Navigate, Outlet, Route, Router, Routes, UNSAFE_LocationContext, UNSAFE_NavigationContext, UNSAFE_RouteContext, createRoutesFromChildren, createSearchParams, generatePath, matchPath, matchRoutes, renderMatches, resolvePath, unstable_HistoryRouter, useHref, useInRouterContext, useLinkClickHandler, useLocation, useMatch, useNavigate, useNavigationType, useOutlet, useOutletContext, useParams, useResolvedPath, useRoutes, useSearchParams)
 
 
 # Getting Started with Create React App
