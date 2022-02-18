@@ -1,7 +1,7 @@
 import React from "react";
 
 // 导入路由
-import {  BrowserRouter as Router,Routes, Route, Link } from "react-router-dom";
+import {  BrowserRouter as Router,Routes, Route } from "react-router-dom";
 
 // 导入首页和城市选择两个组件
 import Home from "./pages/Home";
@@ -17,8 +17,8 @@ function App() {
       {/* <Button color='primary'>Primary</Button> */}
 
         {/* 配置导航菜单 */}
-        <Link to="/home">首页</Link>
-        <Link to="/citylist">城市选择</Link>
+        {/* <Link to="/home">首页</Link>
+        <Link to="/citylist">城市选择</Link> */}
 
         {/* 配置路由 */}
         <Routes>

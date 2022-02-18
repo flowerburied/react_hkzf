@@ -1,0 +1,14 @@
+.addposition {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+
+/* .adm-tab-bar-item-title {
+    color: #2ecc71;
+} */
+
+.adm-tab-bar-item-active {
+    color: #2ecc71;
+}
