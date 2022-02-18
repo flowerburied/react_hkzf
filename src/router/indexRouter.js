@@ -1,6 +1,6 @@
 import React from "react";
 
-import { BrowserRouter, Routes, Route, Switch } from "react-router-dom";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 // 导入首页和城市选择两个组件
 // import Home from "../pages/Home";
 import Home from "../pages/Home";
