@@ -1,8 +1,17 @@
 import React from "react";
-import { Swiper, Toast } from "antd-mobile";
+import { Swiper, Toast, Grid } from "antd-mobile";
 import "./index.css";
+import Nav1 from "../../assets/images/nav-1.png";
+import { useNavigate } from "react-router-dom";
+
 // 导入axios
 import axios from "axios";
+const navs = [
+  { id: 1, img: Nav1, title: "整租", path: "/profile" },
+  { id: 2, img: Nav1, title: "整租", path: "/news" },
+  { id: 3, img: Nav1, title: "整租", path: "/houselist" },
+  { id: 4, img: Nav1, title: "整租", path: "/index" },
+];
 export default class Index extends React.Component {
   state = {
     swipers: [],
@@ -38,6 +47,22 @@ export default class Index extends React.Component {
       </Swiper.Item>
     ));
   }
+  renderNavs() {
+    return navs.map((item) => (
+      <Grid.Item
+        key={item.id}
+        onClick={() => {
+          // this.props.navigate(item.path);
+          console.log(" this.path", item.path);
+          const navigate = useNavigate();
+          navigate(item.path);
+        }}
+      >
+        <img src={item.img} alt="" />
+        <h2> {item.title} </h2>{" "}
+      </Grid.Item>
+    ));
+  }
 
   render() {
     // const items = this.state.colors.map((color, index) => (
@@ -56,9 +81,13 @@ export default class Index extends React.Component {
 
     return (
       <div>
-        <Swiper autoplay loop>
-          {this.renderSwipers()}
-        </Swiper>
+        index页面{" "}
+        {/* <Swiper autoplay loop>
+                          {this.renderSwipers()}
+                        </Swiper>
+                        <Grid className="nav" columns={4}>
+                          {this.renderNavs()}
+                        </Grid> */}
       </div>
     );
   }

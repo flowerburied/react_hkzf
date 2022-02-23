@@ -1,17 +1,13 @@
 import React from "react";
 import { TabBar } from "antd-mobile";
-
 import {
   AppOutline,
   MessageOutline,
   UnorderedListOutline,
   UserOutline,
 } from "antd-mobile-icons";
-import { useNavigate, useLocation, Routes, Route } from "react-router-dom";
-import News from "../News";
-import Index from "../Index";
-import Profile from "../Profile";
-import HouseList from "../HouseList";
+import { useNavigate, useLocation, Outlet } from "react-router-dom";
+
 // import styles from "./demo2.less";
 import "./index.css";
 const Bottom = () => {
@@ -26,22 +22,22 @@ const Bottom = () => {
   };
   const tabs = [
     {
-      key: "/home/index",
+      key: "/",
       title: "首页",
       icon: <AppOutline />,
     },
     {
-      key: "/home/profile",
+      key: "/profile",
       title: "找房",
       icon: <UnorderedListOutline />,
     },
     {
-      key: "/home/news",
+      key: "/news",
       title: "资讯",
       icon: <MessageOutline />,
     },
     {
-      key: "/home/houselist",
+      key: "/houselist",
       title: "我的",
       icon: <UserOutline />,
     },
@@ -65,24 +61,7 @@ export default class Home extends React.Component {
   render() {
     return (
       <div>
-        {/* <div>7777</div> */}
-        <Routes>
-          <Route exact path="/news" element={<News></News>}></Route>
-        </Routes>
-        <Routes>
-          <Route exact path="/index" element={<Index></Index>}></Route>
-        </Routes>
-        <Routes>
-          <Route exact path="/profile" element={<Profile></Profile>}></Route>
-        </Routes>
-        <Routes>
-          <Route
-            exact
-            path="/houselist"
-            element={<HouseList></HouseList>}
-          ></Route>
-        </Routes>
-
+        <Outlet></Outlet>
         <Bottom />
       </div>
     );
