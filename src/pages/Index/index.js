@@ -20,11 +20,11 @@ export default class Index extends React.Component {
   }
 
   componentDidMount() {
-    this.getSwipers()
+    this.getSwipers();
   }
 
-  render() {
-    const items = this.state.colors.map((color, index) => (
+  renderSwipers() {
+    return this.state.colors.map((color, index) => (
       <Swiper.Item key={index}>
         <div
           className="content"
@@ -37,11 +37,27 @@ export default class Index extends React.Component {
         </div>{" "}
       </Swiper.Item>
     ));
+  }
+
+  render() {
+    // const items = this.state.colors.map((color, index) => (
+    //   <Swiper.Item key={index}>
+    //     <div
+    //       className="content"
+    //       style={{ background: color }}
+    //       onClick={() => {
+    //         Toast.show(`你点击了卡片 ${index + 1}`);
+    //       }}
+    //     >
+    //       {index + 1}{" "}
+    //     </div>{" "}
+    //   </Swiper.Item>
+    // ));
 
     return (
       <div>
         <Swiper autoplay loop>
-          {items}
+          {this.renderSwipers()}
         </Swiper>
       </div>
     );
