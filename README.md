@@ -2,6 +2,18 @@
 
 ## 新新版react-router-dom重写
 BV1vS4y1R76b  -P4
+
+获取所有路由信息
+https://www.bilibili.com/video/BV1vS4y1R76b?p=9&t=219.9
+https://reactrouter.com/docs/en/v6/api#matchroutes
+
+路由获取参数
+https://reactrouter.com/docs/en/v6/examples/search-params
+
+const [searchParams] = useSearchParams();
+
+get() 获取单个
+getAll() 获取多个成为对象
 ## 新版react-router-dom重写
 component换成element!!!
 

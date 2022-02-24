@@ -1,5 +1,5 @@
 // 导入路由
-import { Suspense } from "react";
+
 import { useRoutes } from "react-router-dom";
 
 // 导入首页和城市选择两个组件
@@ -9,9 +9,9 @@ import { useRoutes } from "react-router-dom";
 // import router from "./router/indexRouter";
 import router from "./router/indexRouter";
 function App() {
-  return <Suspense fallback={<>loading</>}>{useRoutes(router)}</Suspense>;
+  // return <Suspense fallback={<>loading</>}>{useRoutes(router)}</Suspense>;
 
-  // return useRoutes(router)
+  return useRoutes(router)
   // const element = useRoutes(router);
   // return (
   //   <Routes>

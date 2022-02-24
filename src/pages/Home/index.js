@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { TabBar } from "antd-mobile";
 import {
   AppOutline,
@@ -6,11 +6,35 @@ import {
   UnorderedListOutline,
   UserOutline,
 } from "antd-mobile-icons";
-import { useNavigate, useLocation, Outlet } from "react-router-dom";
+import {
+  useNavigate,
+  useLocation,
+  Outlet,
+  matchRoutes,
+} from "react-router-dom";
 
 // import styles from "./demo2.less";
 import "./index.css";
+import router from "../../router/indexRouter";
 const Bottom = () => {
+  const locationxx = useLocation();
+  useEffect(() => {
+    const routes = matchRoutes(router, locationxx.pathname);
+    // console.log("routes", routes);
+    let pathArr = [];
+    if (routes !== null) {
+      for (let route of routes) {
+        let path = route.route.path;
+        if (path) {
+          pathArr.push(path);
+        }
+      }
+    }
+    if (pathArr.length > 0) {
+      // console.log("pathArr", pathArr);
+    }
+  }, [locationxx.pathname]);
+
   // console.log("this.props", this);
   const navigate = useNavigate();
   // console.log("history", navigate);
@@ -57,6 +81,24 @@ const Bottom = () => {
   );
 };
 
+// const getAllRouter = () => {
+//   const location = useLocation();
+//   useEffect(() => {
+//     const routes = matchRoutes(router, location.pathname);
+//     let pathArr = [];
+//     if (routes !== null) {
+//       for (let route of routes) {
+//         let path = route.route.path;
+//         if (path) {
+//           pathArr.push(path);
+//         }
+//       }
+//     }
+//     if (pathArr.length > 0) {
+//       console.log("pathArr", pathArr);
+//     }
+//   }, [location.pathname]);
+// };
 export default class Home extends React.Component {
   render() {
     return (
