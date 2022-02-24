@@ -1,11 +1,11 @@
 // import React from "react";
 // import * as React from "react";
-import { lazy } from "react";
+import { lazy, Suspense } from "react";
 import { RouteObject } from "react-router-dom";
 // 导入首页和城市选择两个组件
 // import Home from "../pages/Home";
-// import Home from "../pages/Home";
-const Home = lazy(() => import("../pages/Home"));  //路由懒加载
+import Home from "../pages/Home";
+// const Home = lazy(() => import("../pages/Home")); //路由懒加载
 // import CityList from "../pages/CityList"
 const CityList = lazy(() => import("../pages/CityList"));
 // import News from "../pages/News"
@@ -16,27 +16,32 @@ const Index = lazy(() => import("../pages/Index"));
 const HouseList = lazy(() => import("../pages/HouseList"));
 // import Profile from "../pages/Profile"
 const Profile = lazy(() => import("../pages/Profile"));
+
+const lazyLoad = (children: ReactNode): ReactNode => {
+  return <Suspense fallback={<>loading</>}>{children}</Suspense>;
+};
+
 const router: RouteObject[] = [
   {
     path: "/",
     element: <Home />,
     children: [
-      { index: true, element: <Index /> },
+      { index: true, element: lazyLoad(<Index />) },
       {
         path: "news",
-        element: <News />,
+        element: lazyLoad(<News />),
       },
       {
         path: "houseList",
-        element: <HouseList />,
+        element: lazyLoad(<HouseList />),
       },
       {
         path: "profile",
-        element: <Profile />,
+        element: lazyLoad(<Profile />),
       },
     ],
   },
-  { path: "cityList", element: <CityList /> },
+  { path: "cityList", element: lazyLoad(<CityList />) },
 ];
 export default router;
 
