@@ -12,3 +12,7 @@
 .adm-tab-bar-item-active {
     color: #2ecc71;
 }
+
+.adm-grid-item {
+    text-align: center;
+}

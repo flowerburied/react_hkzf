@@ -1,5 +1,10 @@
 
 
+## 安装sass使用scss
+使用sass 安装sass   yarn add sass
+https://create-react-app.dev/docs/adding-a-sass-stylesheet
+## 安装axios
+安装axios  命令 npm add axios
 ## 新新版react-router-dom重写
 BV1vS4y1R76b  -P4
 
