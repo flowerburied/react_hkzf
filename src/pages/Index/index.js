@@ -28,18 +28,19 @@ const renderNavs = () => {
     </Grid.Item>
   ));
 };
-const Indexpage = () => {
+const Indexpage = (props) => {
+  console.log("settest", props.settest);
   const state = {
     swipers: [],
     colors: ["#ace0ff", "#bcffbd", "#e4fabd", "#ffcfac"],
   };
 
-  const getSwipers = async () => {
-    const res = await axios.get("http://localhost:8080/home/swiper");
-    console.log("res", res);
-  };
+  // const getSwipers = async () => {
+  //   const res = await axios.get("http://localhost:8080/home/swiper");
+  //   console.log("res", res);
+  // };
 
-  getSwipers();
+  // getSwipers();
 
   const renderSwipers = () => {
     return state.colors.map((color, index) => (
@@ -62,6 +63,7 @@ const Indexpage = () => {
       {" "}
       <Swiper autoplay loop>
         {renderSwipers()}
+        {/* <renderSwipers></renderSwipers> */}
       </Swiper>
       <Grid className="nav" columns={4}>
         {renderNavs()}
@@ -73,7 +75,7 @@ export default class Index extends React.Component {
   render() {
     return (
       <div>
-        <Indexpage></Indexpage>
+        <Indexpage settest={6666}></Indexpage>
         {/* 12345 */}
       </div>
     );

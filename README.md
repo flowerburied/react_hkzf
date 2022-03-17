@@ -1,12 +1,34 @@
+## useCallback 监听数据变化时执行方法
 
+## 卧槽牛逼的学习网站
 
-## 安装sass使用scss
-使用sass 安装sass   yarn add sass
+https://scrimba.com/learn/learnreact
+toUpperCase()字符串转大写
+https://scrimba.com/learn/learnreact/project-map-experiences-data-into-components-co0704006bcf75aae48fb04c3
+导入数据
+https://scrimba.com/learn/learnreact/project-spread-object-as-props-cobc143b6a3172ef8cfd398f2
+使用解构赋值传输 props
+
+## 添加图片，字体，文件
+
+https://create-react-app.dev/docs/adding-images-fonts-and-files
+
+## 游览器支持
+
+https://create-react-app.dev/docs/supported-browsers-features
+
+## 安装 sass 使用 scss
+
+使用 sass 安装 sass yarn add sass
 https://create-react-app.dev/docs/adding-a-sass-stylesheet
-## 安装axios
-安装axios  命令 npm add axios
-## 新新版react-router-dom重写
-BV1vS4y1R76b  -P4
+
+## 安装 axios
+
+安装 axios 命令 npm add axios
+
+## 新新版 react-router-dom 重写
+
+BV1vS4y1R76b -P4
 
 获取所有路由信息
 https://www.bilibili.com/video/BV1vS4y1R76b?p=9&t=219.9
@@ -19,19 +41,18 @@ const [searchParams] = useSearchParams();
 
 get() 获取单个
 getAll() 获取多个成为对象
-## 新版react-router-dom重写
-component换成element!!!
 
-## antd-mobile是移动端的东西  antd是PC端的东西！！！
+## 新版 react-router-dom 重写
+
+component 换成 element!!!
+
+## antd-mobile 是移动端的东西 antd 是 PC 端的东西！！！
 
 export 'useHistory' (imported as 'useHistory') was not found in 'react-router-dom' (possible exports: BrowserRouter, HashRouter, Link, MemoryRouter, NavLink, Navigate, Outlet, Route, Router, Routes, UNSAFE_LocationContext, UNSAFE_NavigationContext, UNSAFE_RouteContext, createRoutesFromChildren, createSearchParams, generatePath, matchPath, matchRoutes, renderMatches, resolvePath, unstable_HistoryRouter, useHref, useInRouterContext, useLinkClickHandler, useLocation, useMatch, useNavigate, useNavigationType, useOutlet, useOutletContext, useParams, useResolvedPath, useRoutes, useSearchParams)
 
-
 ## 最新的路由重定向
+
 https://gist.github.com/mjackson/b5748add2795ce7448a366ae8f8ae3bb?permalink_comment_id=3972846
-
-
-
 
 # Getting Started with Create React App
 
